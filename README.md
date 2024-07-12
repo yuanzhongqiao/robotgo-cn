@@ -201,51 +201,7 @@ X11 with the XTest extension (the Xtst library)
     <span class="pl-s1">fmt</span>.<span class="pl-en">Println</span>(<span class="pl-s1">text</span>)
   }
 }</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="package main
-
-import (
-  &quot;fmt&quot;
-
-  &quot;github.com/go-vgo/robotgo&quot;
-)
-
-func main() {
-  robotgo.TypeStr(&quot;Hello World&quot;)
-  robotgo.TypeStr(&quot;だんしゃり&quot;, 0, 1)
-  // robotgo.TypeStr(&quot;テストする&quot;)
-
-  robotgo.TypeStr(&quot;Hi, Seattle space needle, Golden gate bridge, One world trade center.&quot;)
-  robotgo.TypeStr(&quot;Hi galaxy, hi stars, hi MT.Rainier, hi sea. こんにちは世界.&quot;)
-  robotgo.Sleep(1)
-
-  // ustr := uint32(robotgo.CharCodeAt(&quot;Test&quot;, 0))
-  // robotgo.UnicodeType(ustr)
-
-  robotgo.KeySleep = 100
-  robotgo.KeyTap(&quot;enter&quot;)
-  // robotgo.TypeStr(&quot;en&quot;)
-  robotgo.KeyTap(&quot;i&quot;, &quot;alt&quot;, &quot;cmd&quot;)
-
-  arr := []string{&quot;alt&quot;, &quot;cmd&quot;}
-  robotgo.KeyTap(&quot;i&quot;, arr)
-
-  robotgo.MilliSleep(100)
-  robotgo.KeyToggle(&quot;a&quot;)
-  robotgo.KeyToggle(&quot;a&quot;, &quot;up&quot;)
-
-  robotgo.WriteAll(&quot;Test&quot;)
-  text, err := robotgo.ReadAll()
-  if err == nil {
-    fmt.Println(text)
-  }
-}" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+ 
   </div></div>
 <div class="markdown-heading" dir="auto"><h4 tabindex="-1" class="heading-element" dir="auto"><a href="https://github.com/go-vgo/robotgo/blob/master/examples/screen/main.go"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">屏幕</font></font></a></h4><a id="user-content-screen" class="anchor" aria-label="永久链接：屏幕" href="#screen"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <div class="highlight highlight-source-go notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">package</span> main
@@ -285,50 +241,7 @@ func main() {
     <span class="pl-s1">robotgo</span>.<span class="pl-en">Save</span>(<span class="pl-s1">img2</span>, <span class="pl-s">"test_"</span><span class="pl-c1">+</span><span class="pl-s1">strconv</span>.<span class="pl-en">Itoa</span>(<span class="pl-s1">i</span>)<span class="pl-c1">+</span><span class="pl-s">".png"</span>)
   }
 }</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="package main
-
-import (
-  &quot;fmt&quot;
-
-  &quot;github.com/go-vgo/robotgo&quot;
-  &quot;github.com/vcaesar/imgo&quot;
-)
-
-func main() {
-  x, y := robotgo.Location()
-  fmt.Println(&quot;pos: &quot;, x, y)
-
-  color := robotgo.GetPixelColor(100, 200)
-  fmt.Println(&quot;color---- &quot;, color)
-
-  sx, sy := robotgo.GetScreenSize()
-  fmt.Println(&quot;get screen size: &quot;, sx, sy)
-
-  bit := robotgo.CaptureScreen(10, 10, 30, 30)
-  defer robotgo.FreeBitmap(bit)
-
-  img := robotgo.ToImage(bit)
-  imgo.Save(&quot;test.png&quot;, img)
-
-  num := robotgo.DisplaysNum()
-  for i := 0; i < num; i++ {
-    robotgo.DisplayID = i
-    img1 := robotgo.CaptureImg()
-    path1 := &quot;save_&quot; + strconv.Itoa(i)
-    robotgo.Save(img1, path1+&quot;.png&quot;)
-    robotgo.SaveJpeg(img1, path1+&quot;.jpeg&quot;, 50)
-
-    img2 := robotgo.CaptureImg(10, 10, 20, 20)
-    robotgo.Save(img2, &quot;test_&quot;+strconv.Itoa(i)+&quot;.png&quot;)
-  }
-}" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 <div class="markdown-heading" dir="auto"><h4 tabindex="-1" class="heading-element" dir="auto"><a href="https://github.com/vcaesar/bitmap/blob/main/examples/main.go"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">位图</font></font></a></h4><a id="user-content-bitmap" class="anchor" aria-label="固定链接：位图" href="#bitmap"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <div class="highlight highlight-source-go notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">package</span> main
@@ -363,45 +276,7 @@ func main() {
 
   <span class="pl-s1">bitmap</span>.<span class="pl-en">Save</span>(<span class="pl-s1">bit</span>, <span class="pl-s">"test.png"</span>)
 }</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="package main
-
-import (
-  &quot;fmt&quot;
-
-  &quot;github.com/go-vgo/robotgo&quot;
-  &quot;github.com/vcaesar/bitmap&quot;
-)
-
-func main() {
-  bit := robotgo.CaptureScreen(10, 20, 30, 40)
-  // use `defer robotgo.FreeBitmap(bit)` to free the bitmap
-  defer robotgo.FreeBitmap(bit)
-
-  fmt.Println(&quot;bitmap...&quot;, bit)
-  img := robotgo.ToImage(bit)
-  // robotgo.SavePng(img, &quot;test_1.png&quot;)
-  robotgo.Save(img, &quot;test_1.png&quot;)
-
-  bit2 := robotgo.ToCBitmap(robotgo.ImgToBitmap(img))
-  fx, fy := bitmap.Find(bit2)
-  fmt.Println(&quot;FindBitmap------ &quot;, fx, fy)
-  robotgo.Move(fx, fy)
-
-  arr := bitmap.FindAll(bit2)
-  fmt.Println(&quot;Find all bitmap: &quot;, arr)
-
-  fx, fy = bitmap.Find(bit)
-  fmt.Println(&quot;FindBitmap------ &quot;, fx, fy)
-
-  bitmap.Save(bit, &quot;test.png&quot;)
-}" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+     
   </div></div>
 <div class="markdown-heading" dir="auto"><h4 tabindex="-1" class="heading-element" dir="auto"><a href="https://github.com/vcaesar/gcv"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OpenCV</font></font></a></h4><a id="user-content-opencv" class="anchor" aria-label="固定链接：OpenCV" href="#opencv"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <div class="highlight highlight-source-go notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">package</span> main
@@ -462,71 +337,7 @@ func main() {
   <span class="pl-s1">x</span>, <span class="pl-s1">y</span> <span class="pl-c1">=</span> <span class="pl-s1">gcv</span>.<span class="pl-en">FindX</span>(<span class="pl-s1">img2</span>, <span class="pl-s1">img</span>)
   <span class="pl-s1">fmt</span>.<span class="pl-en">Println</span>(<span class="pl-s1">x</span>, <span class="pl-s1">y</span>)
 }</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="package main
-
-import (
-  &quot;fmt&quot;
-  &quot;math/rand&quot;
-
-  &quot;github.com/go-vgo/robotgo&quot;
-  &quot;github.com/vcaesar/gcv&quot;
-  &quot;github.com/vcaesar/bitmap&quot;
-)
-
-func main() {
-  opencv()
-}
-
-func opencv() {
-  name := &quot;test.png&quot;
-  name1 := &quot;test_001.png&quot;
-  robotgo.SaveCapture(name1, 10, 10, 30, 30)
-  robotgo.SaveCapture(name)
-
-  fmt.Print(&quot;gcv find image: &quot;)
-  fmt.Println(gcv.FindImgFile(name1, name))
-  fmt.Println(gcv.FindAllImgFile(name1, name))
-
-  bit := bitmap.Open(name1)
-  defer robotgo.FreeBitmap(bit)
-  fmt.Print(&quot;find bitmap: &quot;)
-  fmt.Println(bitmap.Find(bit))
-
-  // bit0 := robotgo.CaptureScreen()
-  // img := robotgo.ToImage(bit0)
-  // bit1 := robotgo.CaptureScreen(10, 10, 30, 30)
-  // img1 := robotgo.ToImage(bit1)
-  // defer robotgo.FreeBitmapArr(bit0, bit1)
-  img := robotgo.CaptureImg()
-  img1 := robotgo.CaptureImg(10, 10, 30, 30)
-
-  fmt.Print(&quot;gcv find image: &quot;)
-  fmt.Println(gcv.FindImg(img1, img))
-  fmt.Println()
-
-  res := gcv.FindAllImg(img1, img)
-  fmt.Println(res[0].TopLeft.Y, res[0].Rects.TopLeft.X, res)
-  x, y := res[0].TopLeft.X, res[0].TopLeft.Y
-  robotgo.Move(x, y-rand.Intn(5))
-  robotgo.MilliSleep(100)
-  robotgo.Click()
-
-  res = gcv.FindAll(img1, img) // use find template and sift
-  fmt.Println(&quot;find all: &quot;, res)
-  res1 := gcv.Find(img1, img)
-  fmt.Println(&quot;find: &quot;, res1)
-
-  img2, _, _ := robotgo.DecodeImg(&quot;test_001.png&quot;)
-  x, y = gcv.FindX(img2, img)
-  fmt.Println(x, y)
-}" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+   
   </div></div>
 <div class="markdown-heading" dir="auto"><h4 tabindex="-1" class="heading-element" dir="auto"><a href="https://github.com/robotn/gohook/blob/master/examples/main.go"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">事件</font></font></a></h4><a id="user-content-event" class="anchor" aria-label="固定链接：活动" href="#event"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <div class="highlight highlight-source-go notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">package</span> main
@@ -585,69 +396,7 @@ func opencv() {
     <span class="pl-s1">fmt</span>.<span class="pl-en">Println</span>(<span class="pl-s">"you press... "</span>, <span class="pl-s">"mouse left button"</span>)
   }
 }</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="package main
-
-import (
-  &quot;fmt&quot;
-
-  // &quot;github.com/go-vgo/robotgo&quot;
-  hook &quot;github.com/robotn/gohook&quot;
-)
-
-func main() {
-  add()
-  low()
-  event()
-}
-
-func add() {
-  fmt.Println(&quot;--- Please press ctrl + shift + q to stop hook ---&quot;)
-  hook.Register(hook.KeyDown, []string{&quot;q&quot;, &quot;ctrl&quot;, &quot;shift&quot;}, func(e hook.Event) {
-    fmt.Println(&quot;ctrl-shift-q&quot;)
-    hook.End()
-  })
-
-  fmt.Println(&quot;--- Please press w---&quot;)
-  hook.Register(hook.KeyDown, []string{&quot;w&quot;}, func(e hook.Event) {
-    fmt.Println(&quot;w&quot;)
-  })
-
-  s := hook.Start()
-  <-hook.Process(s)
-}
-
-func low() {
-	evChan := hook.Start()
-	defer hook.End()
-
-	for ev := range evChan {
-		fmt.Println(&quot;hook: &quot;, ev)
-	}
-}
-
-func event() {
-  ok := hook.AddEvents(&quot;q&quot;, &quot;ctrl&quot;, &quot;shift&quot;)
-  if ok {
-    fmt.Println(&quot;add events...&quot;)
-  }
-
-  keve := hook.AddEvent(&quot;k&quot;)
-  if keve {
-    fmt.Println(&quot;you press... &quot;, &quot;k&quot;)
-  }
-
-  mleft := hook.AddEvent(&quot;mleft&quot;)
-  if mleft {
-    fmt.Println(&quot;you press... &quot;, &quot;mouse left button&quot;)
-  }
-}" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 <div class="markdown-heading" dir="auto"><h4 tabindex="-1" class="heading-element" dir="auto"><a href="https://github.com/go-vgo/robotgo/blob/master/examples/window/main.go"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">窗户</font></font></a></h4><a id="user-content-window" class="anchor" aria-label="固定链接：窗口" href="#window"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <div class="highlight highlight-source-go notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">package</span> main
